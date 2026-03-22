@@ -96,6 +96,7 @@ int main () {
     free(PilhaAux.vtr);
     free(p2.vtr);
     // nova linha
+    // teste branch
 
     return 0;
 }
