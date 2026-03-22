@@ -1,4 +1,4 @@
-#include "ex2contador.h"
+#include "contador.h"
 
 void inicializar(Contador *c) { c->valor = 0; }
 

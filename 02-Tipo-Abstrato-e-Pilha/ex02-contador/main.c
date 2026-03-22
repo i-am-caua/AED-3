@@ -1,4 +1,4 @@
-#include "ex2contador.h"
+#include "contador.h"
 #include <stdio.h>
 
 

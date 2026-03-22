@@ -1,4 +1,4 @@
-#include "ex3data.h"
+#include "data.h"
 #include <stdio.h>
 
 

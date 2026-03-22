@@ -1,0 +1,15 @@
+# Compilados
+*.exe
+*.o
+*.out
+
+# Pastas de saída
+output/
+
+# IDE
+.vscode/
+*.code-workspace
+
+# Sistema
+Thumbs.db
+.DS_Store
