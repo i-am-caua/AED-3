@@ -95,7 +95,7 @@ int main () {
     free(p.vtr);
     free(PilhaAux.vtr);
     free(p2.vtr);
-
+    // nova linha
 
     return 0;
 }
