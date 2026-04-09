@@ -42,15 +42,15 @@ void pop (Pilha *p) {
     p->topo--;
 }
 int comparaPilha (Pilha *p1, Pilha *p2) {
-    for (int i = 0; i < p1->tam; i++) {
-        if (p1->vtr[p1->topo] != p2->vtr[p2->topo]) {
-            return 0;
-        }
+   while (!isEmpty(p1) && !isEmpty(p2)) {
+    if (p1->vtr[p1->topo] != p2->vtr[p2->topo]) {
+        return 0;
     }
+    pop (p1);
+    pop (p2);
+   }
     return 1;
 }
-
-
 
 int main () {
     int tamPilha, tamPilha2;
