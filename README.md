@@ -1,34 +1,41 @@
-# 📚 AED 3 — Algoritmos e Estruturas de Dados III
+# 03 — Pilha Estática
 
-Repositório com os exercícios e atividades da disciplina **Algoritmos e Estruturas de Dados III (AED 3)**, implementados em **C**.
+Implementação e exercícios com pilha estática (stack) usando vetores em C.
 
----
+## Estrutura
 
-## 📂 Estrutura do Repositório
-
-| Pasta | Conteúdo |
+### Parte 1 — Fundamentos (Prof. Substituta)
+| Arquivo | Descrição |
 |---|---|
-| [`01-Alocacao-Dinamica/`](./01-Alocacao-Dinamica/) | Exercícios sobre alocação dinâmica de memória (`malloc`, `calloc`, `free`) |
-| [`02-Tipo-Abstrato-e-Pilha/`](./02-Tipo-Abstrato-e-Pilha/) | TADs (Tipo Abstrato de Dados) e introdução a pilhas |
-| [`03-Pilha-Estatica/`](./03-Pilha-Estatica/) | Implementação e exercícios com pilha estática |
+| `ex01.c` | Implementação básica de pilha — push, pop, isEmpty, isFull |
+| `ex02.c` | Exercício com operações de pilha |
+| `ex03.c` | Exercício avançado de pilha |
+| `ex04.c` | Exercício adicional de pilha |
 
----
+### Parte 2 — Exercícios Avançados (Prof. Substituta)
+| Arquivo | Descrição |
+|---|---|
+| `ex01.c` | Exercício avançado 1 |
+| `ex02.c` | Exercício avançado 2 |
+| `ex03.c` | Exercício avançado 3 |
 
-## 🛠️ Como Compilar
+### pilhaProfThermer — Exercícios do Prof. Thermer
+Exercícios passados pelo novo professor titular da disciplina.
 
-Todos os exercícios podem ser compilados com o **GCC**:
+| Arquivo | Descrição |
+|---|---|
+| `exc1.c` | Exercício 1 |
+| `exc2.c` | Exercício 2 |
+| `exc3.c` | Exercício 3 |
+
+## Como compilar
 
 ```bash
-# Exercício simples (arquivo único)
+# Exercícios da parte1/parte2
+cd parte1/
 gcc ex01.c -o ex01
 
-# Exercícios com TAD (múltiplos arquivos)
-cd 02-Tipo-Abstrato-e-Pilha/ex02-contador/
-gcc main.c contador.c -o contador
+# Exercícios do Prof. Thermer
+cd pilhaProfThermer/
+gcc exc1.c -o exc1
 ```
-
----
-
-## 👤 Autor
-
-**Cauã** — Estudante de Ciência da Computação
