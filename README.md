@@ -1,8 +1,12 @@
-# 03 — Pilha Estática
+# AED-3 — Algoritmos e Estruturas de Dados 3
+
+Repositório com implementações e exercícios da disciplina AED-3 em C.
+
+---
+
+## 03 — Pilha Estática
 
 Implementação e exercícios com pilha estática (stack) usando vetores em C.
-
-## Estrutura
 
 ### Parte 1 — Fundamentos (Prof. Substituta)
 | Arquivo | Descrição |
@@ -28,14 +32,40 @@ Exercícios passados pelo novo professor titular da disciplina.
 | `exc2.c` | Exercício 2 |
 | `exc3.c` | Exercício 3 |
 
+---
+
+## 04 — Fila Estática
+
+Implementação e exercícios com fila estática (queue) usando vetores em C.
+
+### Estrutura base
+| Arquivo | Descrição |
+|---|---|
+| `estruturaFila.c` | Implementação completa de fila — criarFila, inserir, remover, isEmpty, isFull, imprimirFila com menu interativo |
+
+### ListaExcFila — Lista de Exercícios de Fila
+| Arquivo | Descrição |
+|---|---|
+| `exc3.c` | Exercício de fila com operações adicionais — size, clear |
+
+---
+
 ## Como compilar
 
 ```bash
-# Exercícios da parte1/parte2
-cd parte1/
+# Exercícios de Pilha (parte1/parte2)
+cd 03-Pilha-Estatica/parte1/
 gcc ex01.c -o ex01
 
-# Exercícios do Prof. Thermer
-cd pilhaProfThermer/
+# Exercícios de Pilha do Prof. Thermer
+cd 03-Pilha-Estatica/pilhaProfThermer/
 gcc exc1.c -o exc1
+
+# Estrutura de Fila
+cd 04-Filha-Estatica/
+gcc estruturaFila.c -o estruturaFila
+
+# Exercícios de Fila
+cd 04-Filha-Estatica/ListaExcFila/
+gcc exc3.c -o exc3
 ```
