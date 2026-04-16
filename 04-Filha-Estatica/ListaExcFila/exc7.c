@@ -11,11 +11,6 @@ typedef struct {
     int *vet;
 } Pilha;
 
-Pilha *criarPilha(int tam);
-int isFullPilha(Pilha *p);
-int isEmptyPilha(Pilha *p);
-int push(Pilha *p, int valor);
-int pop(Pilha *p, int *valor);
 
 Fila *criarFila (int tam) {
     Fila *f = malloc (sizeof(Fila));
@@ -51,7 +46,7 @@ int remover (Fila *f, int *valorRemovido) {
     f->inicio++;
     f->qtd--;
     return 1;
-    
+
 }
 int size (Fila *f) {
     return f->qtd;
@@ -76,7 +71,7 @@ void printFila (Fila *f) {
     }
     free (filaAux->vet);
     free (filaAux);
-    
+
 }
 void mesclaFila (Fila *f1, Fila *f2, Fila *f3) {
     int valor;
@@ -85,36 +80,36 @@ void mesclaFila (Fila *f1, Fila *f2, Fila *f3) {
             if (f1->vet[f1->inicio] <= f2->vet[f2->inicio]) {
                 remover (f1, &valor);
                 inserir (f3, valor);
-            } 
+            }
             else {
                 remover (f2, &valor);
                 inserir (f3, valor);
             }
 
-        } 
+        }
         else if (!isEmpty(f1)) {
             remover (f1, &valor);
             inserir (f3, valor);
-        } 
+        }
         else {
             remover (f2, &valor);
             inserir (f3, valor);
         }
     }
-    
+
 }
 int main () {
     int valorF1[] = {0, 2, 6, 7, 11};
     int valorF2[] = {1, 2, 5, 9, 10, 12};
     int sizeF1 = sizeof (valorF1) / sizeof (int);
     int sizeF2 = sizeof (valorF2) / sizeof (int);
-    
-    
+
+
     Fila *f1 = criarFila(sizeF1);
     Fila *f2 = criarFila(sizeF2);
     Fila *f3 = criarFila(sizeF1 + sizeF2);
     if (f1 == NULL || f2 == NULL || f3 == NULL) return 1;
-    
+
     for (int i = 0; i < sizeF1; i++) {
         inserir (f1,valorF1[i]);
     }
@@ -141,8 +136,7 @@ int main () {
     free(f2);
     free(f3->vet);
     free(f3);
-        
+
     return 0;
 
 }
-   
