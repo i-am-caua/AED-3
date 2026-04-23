@@ -89,7 +89,7 @@ void printFila (Fila *f) {
     }
     free (filaAux->vet);
     free (filaAux);
-    
+     
 }
 int main () {
     int op, tam;

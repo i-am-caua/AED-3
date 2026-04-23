@@ -103,56 +103,40 @@ int pop(Pilha *p, int *valor) {
 
 void mesclaFilaDecrescente(Fila *f1, Fila *f2, Fila *f3) {
     int total = f1->qtd + f2->qtd;
-    Fila *fAux = criarFila(total);
     Pilha *p = criarPilha(total);
-    int valor;
-
-    if (fAux == NULL || p == NULL) {
-        if (fAux != NULL) {
-            free(fAux->vet);
-            free(fAux);
-        }
-        if (p != NULL) {
-            free(p->vet);
-            free(p);
-        }
-        return;
-    }
+    int v;
 
     while (!isEmpty(f1) || !isEmpty(f2)) {
         if (!isEmpty(f1) && !isEmpty(f2)) {
             if (f1->vet[f1->inicio] <= f2->vet[f2->inicio]) {
-                remover(f1, &valor);
-                inserir(fAux, valor);
+                remover(f1, &v);
+                inserir(f3, v);
             } else {
-                remover(f2, &valor);
-                inserir(fAux, valor);
+                remover(f2, &v);
+                inserir(f3, v);
             }
         } else if (!isEmpty(f1)) {
-            remover(f1, &valor);
-            inserir(fAux, valor);
+            remover(f1, &v);
+            inserir(f3, v);
         } else {
-            remover(f2, &valor);
-            inserir(fAux, valor);
+            remover(f2, &v);
+            inserir(f3, v);
         }
     }
 
-    while (!isEmpty(fAux)) {
-        remover(fAux, &valor);
-        push(p, valor);
+    while (!isEmpty(f3)) {
+        remover(f3, &v);
+        push(p, v);
     }
 
     while (!isEmptyPilha(p)) {
-        pop(p, &valor);
-        inserir(f3, valor);
+        pop(p, &v);
+        inserir(f3, v);
     }
 
-    free(fAux->vet);
-    free(fAux);
     free(p->vet);
     free(p);
 }
-
 int main () {
     int valorF1[] = {0, 2, 6, 7, 11};
     int valorF2[] = {1, 2, 5, 9, 10, 12};
